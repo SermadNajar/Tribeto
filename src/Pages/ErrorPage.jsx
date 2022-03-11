@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Error404 from '../components/Error404';
 
 function ErrorPage() {
   return (
       <div className='ErrorPage'>
-          <h2>Page not found</h2>
+          <Error404 />
       </div>
   )
 }

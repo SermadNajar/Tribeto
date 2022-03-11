@@ -1,10 +1,13 @@
 import React from 'react'
+import LoginScreen from '../components/LoginScreen';
+
+
 
 function Login() {
   return (
 
       <div className='Login'>
-        <h1>Login</h1>
+        <LoginScreen />
       </div>
   
   )
