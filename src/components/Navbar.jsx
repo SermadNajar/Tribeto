@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -15,11 +14,10 @@ const user = {
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Dashboard', href: '/dashboard', current: false },
-  { name: 'Pricing', href: '/pricing', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Price', href: '/price', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
+  { name: 'Your Profile', href: '/profile' },
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '#' },
 ]
@@ -51,12 +49,12 @@ export default function Navbar() {
                   <img
                     className="block lg:hidden h-8 w-auto"
                     src="Assets/img/logo-light.png"
-                    alt="Workflow"
+                    alt="Nemondo"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
                     src="Assets/img/logo-light.png"
-                    alt="Workflow"
+                    alt="Nemondo"
                   />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
