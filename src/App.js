@@ -1,13 +1,10 @@
-import Navbar from './components/Homepage/Navbar'
-import HeroSection from './components/Homepage/HeroSection'
-import Footer from './components/Homepage/Footer'
+import React from 'react'
+import Home from './/Pages/Home';
 
-export default function App() {
+function App() {
   return (
-    <>
-    <Navbar />
-    <HeroSection />
-    <Footer />
-    </>
-  )
+  <Home />
+  );
 }
+
+export default App;
