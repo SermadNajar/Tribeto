@@ -6,18 +6,19 @@ export default function Example() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div>
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Used by the world's most average companies
+              Seamless integration with the most popular systems
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed. Quam a scelerisque amet
-              ullamcorper eu enim et fermentum, augue.
+              We have done all the tedious work for you, so you can safely and
+              securely start using Tribeto in matter of minutes. If your system
+              is not yet supported, you can achieve the same results with direct
+              integration with embeded javascript snippets.
             </p>
             <div className="mt-8 sm:flex">
               <div className="rounded-md shadow">
                 <a
                   href="#"
-                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-secondary"
                 >
                   Create Account
                 </a>
@@ -25,7 +26,7 @@ export default function Example() {
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a
                   href="#"
-                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-lightgreen hover:bg-lightgreenhover"
                 >
                   Contact Us
                 </a>
@@ -36,43 +37,57 @@ export default function Example() {
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Workcation"
+                src="Assets/img/integrations/shopify.svg"
+                alt="Shopify"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
+                src="Assets/img/integrations/woocommerce.svg"
+                alt="WooCommerce"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center py-8 px-8 pl-14 pr-14 bg-gray-50">
+              <img
+                className="max-h-12"
+                src="Assets/img/integrations/wordpress.svg"
+                alt="Wordpress"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
+                src="Assets/img/integrations/prestashop.svg"
+                alt="Prestashop"
+              />
+            </div>
+            <div className="col-span-1 flex justify-center py-8 px-8 pl-14 pr-14 bg-gray-50">
+              <img
+                className="max-h-12"
+                src="Assets/img/integrations/bigcommerce.svg"
+                alt="Bigcommerce"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
+                src="Assets/img/integrations/magento.svg"
+                alt="Magento"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
+                src="Assets/img/integrations/opencart.svg"
+                alt="OpenCart"
               />
             </div>
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
               <img
                 className="max-h-12"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
+                src="Assets/img/integrations/javascript.svg"
+                alt="Javascript"
               />
             </div>
           </div>

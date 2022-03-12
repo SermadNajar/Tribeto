@@ -57,7 +57,7 @@ const posts = [
 
 export default function Example() {
   return (
-    <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div className="relative bg-primary px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0">
         <div className="bg-white h-1/3 sm:h-2/3" />
       </div>
@@ -86,7 +86,7 @@ export default function Example() {
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-indigo-600">
+                  <p className="text-sm font-medium text-primary">
                     <a href={post.category.href} className="hover:underline">
                       {post.category.name}
                     </a>

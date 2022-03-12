@@ -1,93 +1,55 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { InboxIcon, SparklesIcon } from '@heroicons/react/outline'
+import { LocationMarkerIcon, HeartIcon } from "@heroicons/react/outline";
+
+const incentives = [
+  {
+    name: "Review the delivery",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
+    description: "You can now review wether your order was delivered on time.",
+  },
+  {
+    name: "Rate the service",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
+    description: "Rate your customer experience and give your feedback.",
+  },
+  {
+    name: "Value for money",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
+    description: "Rate wether the purchase's value worth the cost.",
+  },
+];
 
 export default function Example() {
   return (
     <div className="relative bg-white pt-16 pb-32 overflow-hidden">
-      <div className="relative">
-        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-            <div>
-              <div>
-                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
-                  <InboxIcon className="h-6 w-6 text-white" aria-hidden="true" />
-                </span>
-              </div>
-              <div className="mt-6">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  Stay on top of customer support
-                </h2>
-                <p className="mt-4 text-lg text-gray-500">
-                  Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                  porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus
-                  viverra dui tellus ornare pharetra.
-                </p>
-                <div className="mt-6">
-                  <a
-                    href="#"
-                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
-                  >
-                    Get started
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 border-t border-gray-200 pt-6">
-              <blockquote>
-                <div>
-                  <p className="text-base text-gray-500">
-                    &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur
-                    donec aliquet. Mi venenatis in euismod ut.&rdquo;
-                  </p>
-                </div>
-                <footer className="mt-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="h-6 w-6 rounded-full"
-                        src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="text-base font-medium text-gray-700">Marcia Hill, Digital Marketing Manager</div>
-                  </div>
-                </footer>
-              </blockquote>
-            </div>
-          </div>
-          <div className="mt-12 sm:mt-16 lg:mt-0">
-            <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-24">
+      <div className="mt-24 mb-24">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
           <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
             <div>
               <div>
-                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-indigo-600">
-                  <SparklesIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
+                  <LocationMarkerIcon
+                    className="h-6 w-6 text-white"
+                    aria-hidden="true"
+                  />
                 </span>
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  Better understand your customers
+                  Video reviews both in online and offline stores with Tribeto
                 </h2>
                 <p className="mt-4 text-lg text-gray-500">
-                  Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia
-                  porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus
-                  viverra dui tellus ornare pharetra.
+                  Now you can create video reviews in the physical stores you
+                  visit. It can be anything from your favorite restaurant,
+                  mechanic, hairdresser or something completely different.
                 </p>
                 <div className="mt-6">
                   <a
                     href="#"
-                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary"
                   >
                     Get started
                   </a>
@@ -99,13 +61,109 @@ export default function Example() {
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                alt="Customer profile user interface"
+                src="Assets/img/images/restaurant.jpg"
+                alt="QR"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* New section */}
+      <div className="bg-gray-50">
+        <div className="max-w-7xl mx-auto py-24 sm:px-2 sm:py-32 lg:px-4">
+          <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
+            <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
+              <div>
+                <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+                  Delivery, Service & Value for money
+                </h2>
+                <p className="mt-4 text-gray-500">
+                  With Tribeto you are able to rate your shopping experience on
+                  more than just the regular 5 stars. You can rate your
+                  experience in regards to how good the service and delivery
+                  was, and wether you got value for your hard earned money. We
+                  sincerly belive in quality experiences and wish for you to
+                  have them.
+                </p>
+              </div>
+              <div className=" aspect-h-2 rounded-lg overflow-hidden">
+                <img
+                  src="Assets/img/images/value.png"
+                  alt=""
+                  className="object-center object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-3">
+              {incentives.map((incentive) => (
+                <div key={incentive.name} className="sm:flex lg:block">
+                  <div className="sm:flex-shrink-0">
+                    <img
+                      className="w-16 h-16"
+                      src={incentive.imageSrc}
+                      alt=""
+                    />
+                  </div>
+                  <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {incentive.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-500">
+                      {incentive.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* New section */}
+      <div className="mt-24">
+        <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+          <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+            <div>
+              <div>
+                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-primary">
+                  <HeartIcon
+                    className="h-6 w-6 text-white"
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+              <div className="mt-6">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                  Get rewards and discounts for your valuable feedback
+                </h2>
+                <p className="mt-4 text-lg text-gray-500">
+                  Each store can choose to reward their customers with a variety
+                  of discounts. Free shipping the next time you visit the store,
+                  or even cashback and precentage discounts.
+                </p>
+                <div className="mt-6">
+                  <a
+                    href="#"
+                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary"
+                  >
+                    Get started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+            <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+              <img
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                src="Assets/img/images/discount.jpg"
+                alt="Discounts"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,34 +1,34 @@
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: "Marketing", href: "#" },
+    { name: "Analytics", href: "#" },
+    { name: "Commerce", href: "#" },
+    { name: "Insights", href: "#" },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: "Pricing", href: "#" },
+    { name: "Documentation", href: "#" },
+    { name: "Guides", href: "#" },
+    { name: "API Status", href: "#" },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Partners", href: "#" },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: "Claim", href: "#" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: "Facebook",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -40,8 +40,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Instagram',
-      href: '#',
+      name: "Instagram",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -53,8 +53,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Twitter',
-      href: '#',
+      name: "Twitter",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -62,8 +62,8 @@ const navigation = {
       ),
     },
     {
-      name: 'GitHub',
-      href: '#',
+      name: "GitHub",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -75,8 +75,8 @@ const navigation = {
       ),
     },
     {
-      name: 'Dribbble',
-      href: '#',
+      name: "Dribbble",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -88,7 +88,7 @@ const navigation = {
       ),
     },
   ],
-}
+};
 
 export default function Footer() {
   return (
@@ -101,11 +101,16 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 xl:col-span-4">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Solutions
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-300 hover:text-white"
+                      >
                         {item.name}
                       </a>
                     </li>
@@ -113,11 +118,16 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Support
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-300 hover:text-white"
+                      >
                         {item.name}
                       </a>
                     </li>
@@ -127,11 +137,16 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Company
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-300 hover:text-white"
+                      >
                         {item.name}
                       </a>
                     </li>
@@ -139,11 +154,16 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  Legal
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-300 hover:text-white">
+                      <a
+                        href={item.href}
+                        className="text-base text-gray-300 hover:text-white"
+                      >
                         {item.name}
                       </a>
                     </li>
@@ -153,7 +173,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Language &amp; Currency</h3>
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+              Language &amp; Currency
+            </h3>
             <form className="mt-4 sm:max-w-xs">
               <fieldset className="w-full">
                 <label htmlFor="language" className="sr-only">
@@ -173,7 +195,10 @@ export default function Footer() {
                     <option>Spanish</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                    <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
+                    <ChevronDownIcon
+                      className="h-4 w-4 text-white"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -198,7 +223,10 @@ export default function Footer() {
                     <option>USD</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                    <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
+                    <ChevronDownIcon
+                      className="h-4 w-4 text-white"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -211,7 +239,8 @@ export default function Footer() {
               Subscribe to our newsletter
             </h3>
             <p className="mt-2 text-base text-gray-300">
-              The latest news, articles, and resources, sent to your inbox weekly.
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
             </p>
           </div>
           <form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
@@ -230,7 +259,7 @@ export default function Footer() {
             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               <button
                 type="submit"
-                className="w-full bg-indigo-500 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                className="w-full bg-primary border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
               >
                 Subscribe
               </button>
@@ -240,7 +269,11 @@ export default function Footer() {
         <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-400 hover:text-gray-300"
+              >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
@@ -252,5 +285,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
