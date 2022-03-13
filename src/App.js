@@ -6,6 +6,7 @@ import Login from "./Pages/Login";
 import Price from "./Pages/Price";
 import ErrorPage from "./Pages/ErrorPage";
 import Profile from "./Pages/Profile";
+import Ctacampaign from "./Pages/Ctacampaign";
 import WithNav from "./components/WithNav";
 import WithoutNav from "./components/WithoutNav";
 
@@ -20,6 +21,7 @@ function App() {
       <Route element={<WithNav />}>
         <Route index element={<Home />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Ctacampaign" element={<Ctacampaign />} />
         <Route path="/Price" element={<Price />} />
         <Route path="/Profile/:username" element={<Profile />} />
       </Route>

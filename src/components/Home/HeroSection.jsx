@@ -1,6 +1,6 @@
 export default function Example() {
   return (
-    <div className="relative bg-lightgreen overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       <div
         className="hidden lg:block lg:absolute lg:inset-0"
         aria-hidden="true"
@@ -26,18 +26,21 @@ export default function Example() {
                 y={0}
                 width={4}
                 height={4}
-                className="text-tertiary"
+                className="text-black"
                 fill="currentColor"
               />
             </pattern>
           </defs>
-          <rect
+
+          {/* Square graphics
+            <rect
             y={72}
             width={640}
             height={640}
             className="text-primary"
             fill="currentColor"
           />
+          */}
           <rect
             x={118}
             width={404}
@@ -52,8 +55,8 @@ export default function Example() {
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
-                <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-                  <span className="block text-tertiary">Search & Find</span>
+                <span className="mt-12 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+                  <span className="block text-black">Search & Find</span>
                   <span className="block text-primary">Genuine Reviews</span>
                 </span>
               </h1>
