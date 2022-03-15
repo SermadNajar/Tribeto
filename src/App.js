@@ -8,7 +8,9 @@ import ErrorPage from "./Pages/ErrorPage";
 import Profile from "./Pages/Profile";
 import Ctacampaign from "./Pages/Ctacampaign";
 import WithNav from "./components/WithNav";
+import WithNavSearch from "./components/WithNavSearch";
 import WithoutNav from "./components/WithoutNav";
+
 
 function App() {
   return (
@@ -20,10 +22,11 @@ function App() {
       </Route>
       <Route element={<WithNav />}>
         <Route index element={<Home />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Ctacampaign" element={<Ctacampaign />} />
         <Route path="/Price" element={<Price />} />
-        <Route path="/Profile/:username" element={<Profile />} />
+      </Route>
+      <Route element={<WithNav />}>
+        <Route path="/Dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
     </Router>

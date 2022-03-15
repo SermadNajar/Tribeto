@@ -1,4 +1,9 @@
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import React from "react";
+import { useTranslation } from 'react-i18next'
+
+
+
 
 const navigation = {
   solutions: [
@@ -91,6 +96,16 @@ const navigation = {
 };
 
 export default function Footer() {
+  const { t, i18n } = useTranslation();
+
+  function handleClick(lang) {  
+    i18n.changeLanguage(lang);
+
+  }
+  
+
+
+  
   return (
     <footer className="bg-gray-800" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -174,7 +189,7 @@ export default function Footer() {
           </div>
           <div className="mt-12 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Language &amp; Currency
+            {t('2.1')}
             </h3>
             <form className="mt-4 sm:max-w-xs">
               <fieldset className="w-full">
@@ -182,17 +197,14 @@ export default function Footer() {
                   Language
                 </label>
                 <div className="relative">
-                  <select
+                  <select 
                     id="language"
                     name="language"
                     className="appearance-none block w-full bg-none bg-gray-700 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm"
                     defaultValue="English"
                   >
-                    <option>English</option>
-                    <option>French</option>
-                    <option>German</option>
-                    <option>Japanese</option>
-                    <option>Spanish</option>
+                    <option onClick={() => handleClick("en")}>English</option>
+                    <option onClick={() => handleClick("da")}>Danish</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
                     <ChevronDownIcon
@@ -202,41 +214,14 @@ export default function Footer() {
                   </div>
                 </div>
               </fieldset>
-              <fieldset className="mt-4 w-full">
-                <label htmlFor="currency" className="sr-only">
-                  Currency
-                </label>
-                <div className="mt-1.5 relative">
-                  <select
-                    id="currency"
-                    name="currency"
-                    className="appearance-none w-full bg-none bg-gray-700 border border-transparent rounded-md block py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm"
-                    defaultValue="AUD"
-                  >
-                    <option>ARS</option>
-                    <option>AUD</option>
-                    <option>CAD</option>
-                    <option>CHF</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
-                    <option>JPY</option>
-                    <option>USD</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                    <ChevronDownIcon
-                      className="h-4 w-4 text-white"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-              </fieldset>
+              
             </form>
           </div>
         </div>
         <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
           <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Subscribe to our newsletter
+              {t('1.1')}
             </h3>
             <p className="mt-2 text-base text-gray-300">
               The latest news, articles, and resources, sent to your inbox

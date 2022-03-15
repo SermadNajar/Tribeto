@@ -2,10 +2,8 @@ import { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 
-let user = {
+const user = {
   name: "Chelsea Hagon",
   email: "chelsea.hagon@example.com",
   imageUrl:
@@ -17,10 +15,10 @@ const navigation = [
   { name: "Teams", href: "#", current: false },
   { name: "Directory", href: "#", current: false },
 ];
-let userNavigation  = [
-  { name: i18next.t("18.1"), href: "#" },
-  { name: i18next.t("19.1"), href: "#" },
-  { name: i18next.t("20.1"), href: "/login" },
+const userNavigation = [
+  { name: "Your Profile", href: "#" },
+  { name: "Settings", href: "#" },
+  { name: "Sign out", href: "#" },
 ];
 
 function classNames(...classes) {
@@ -28,10 +26,6 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  const { t, i18n } = useTranslation();
-  function handleClick(lang) {
-    i18n.changeLanguage(lang);
-  }
   return (
     <>
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
@@ -40,7 +34,7 @@ export default function Example() {
         className={({ open }) =>
           classNames(
             open ? "fixed inset-0 z-40 overflow-y-auto" : "",
-            "bg-white shadow-sm sticky top-0 z-50"
+            "bg-white shadow-sm lg:static lg:overflow-y-visible"
           )
         }
       >
@@ -54,7 +48,7 @@ export default function Example() {
                       <img
                         className="block h-8 w-auto"
                         src="Assets/img/logo-dark.png"
-                        alt="Tribeto logo"
+                        alt="Workflow"
                       />
                     </a>
                   </div>
@@ -75,7 +69,7 @@ export default function Example() {
                         <input
                           id="search"
                           name="search"
-                          className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm"
+                          className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                           placeholder="Search for a company"
                           type="search"
                         />
@@ -85,7 +79,7 @@ export default function Example() {
                 </div>
                 <div className="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
                   {/* Mobile menu button */}
-                  <Popover.Button className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                  <Popover.Button className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Open menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -97,7 +91,7 @@ export default function Example() {
                 <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
                   <a
                     href="#"
-                    className="ml-5 flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    className="ml-5 flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -106,7 +100,7 @@ export default function Example() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="flex-shrink-0 relative ml-5">
                     <div>
-                      <Menu.Button className="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                      <Menu.Button className="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
@@ -145,10 +139,10 @@ export default function Example() {
                   </Menu>
 
                   <a
-                    href="/ctacampaign"
-                    className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    href="#"
+                    className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
-                    FOR COMPANIES
+                    New Project
                   </a>
                 </div>
               </div>
@@ -191,7 +185,7 @@ export default function Example() {
                   </div>
                   <button
                     type="button"
-                    className="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    className="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
