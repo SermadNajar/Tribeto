@@ -62,12 +62,12 @@ export default function Example() {
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
                 <span className="mt-12 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-                  <span className="block text-black">{t("3.1")}</span>
-                  <span className="block text-primary">{t("4.1")}</span>
+                  <span className="block text-black">Search & Find</span>
+                  <span className="block text-primary">Genuine Reviews</span>
                 </span>
               </h1>
               <p className="mt-3 text-base text-tertiary sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                {t("5.1")}
+                Discover video reviews by real people.
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <div>
@@ -76,7 +76,7 @@ export default function Example() {
                       type="text"
                       name="search"
                       id="search"
-                      placeholder={t("6.1")}
+                      placeholder="Search for a company"
                       className="shadow-sm focus:ring-secondary focus:border-secondary block w-full pr-40 sm:text-lg border-gray-300 rounded-md "
                     />
                     <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
@@ -135,7 +135,9 @@ export default function Example() {
                   type="button"
                   className="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                 >
-                  <span className="sr-only">{t("7.1")}</span>
+                  <span className="sr-only">
+                    "Watch our video to learn more"
+                  </span>
                   <img
                     className="w-full"
                     src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"

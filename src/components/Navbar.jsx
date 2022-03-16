@@ -17,10 +17,10 @@ const navigation = [
   { name: "Teams", href: "#", current: false },
   { name: "Directory", href: "#", current: false },
 ];
-let userNavigation  = [
-  { name: i18next.t("18.1"), href: "#" },
-  { name: i18next.t("19.1"), href: "#" },
-  { name: i18next.t("20.1"), href: "/login" },
+let userNavigation = [
+  { name: "Your profile", href: "#" },
+  { name: "Setttings", href: "#" },
+  { name: "Sign out", href: "/login" },
 ];
 
 function classNames(...classes) {
