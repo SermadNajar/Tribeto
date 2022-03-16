@@ -59,8 +59,7 @@ export default function Example() {
                   </h1>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     Tribeto transforms the way companies interact with their
-                    customers.
-                    Collect valuable, actionable and credible feedback.
+                    customers through video reviews.
                   </p>
                   <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
                     Used by
@@ -96,8 +95,11 @@ export default function Example() {
                 <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
                   <div className="px-4 py-8 sm:px-10">
                     <div>
-                      <p className="text-sm text-center font-medium text-gray-700">
+                      <p className="text-2xl m-2 text-center font-bold text-gray-700">
                         Create an account for free
+                      </p>
+                      <p className="text-sm text-center font-medium text-gray-700">
+                        And feel the power of video reviews today.
                       </p>
                     </div>
 
@@ -108,39 +110,100 @@ export default function Example() {
                       >
                         <div className="w-full border-t border-gray-300" />
                       </div>
-                      <div className="relative flex justify-center text-sm">
-                      </div>
+                      <div className="relative flex justify-center text-sm"></div>
                     </div>
 
                     <div className="mt-6">
                       <form action="#" method="POST" className="space-y-6">
                         <div>
-                          <label htmlFor="name" className="sr-only">
-                            Full name
+                          <label htmlFor="company-name" className="sr-only">
+                            Company name
                           </label>
                           <input
                             type="text"
-                            name="name"
-                            id="name"
-                            autoComplete="name"
-                            placeholder="Full name"
+                            name="company-name"
+                            id="company-name"
+                            autoComplete="company-name"
+                            placeholder="Company name"
                             required
-                            className="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+
+                        <div className="grid grid-cols-6 gap-6">
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="first-name" className="sr-only">
+                              First name
+                            </label>
+                            <input
+                              type="text"
+                              name="first-name"
+                              id="first-name"
+                              autoComplete="first-name"
+                              placeholder="First name"
+                              required
+                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </div>
+
+                          <div className="col-span-6 sm:col-span-3">
+                            <label htmlFor="last-name" className="sr-only">
+                              Last name
+                            </label>
+                            <input
+                              type="text"
+                              name="last-name"
+                              id="last-name"
+                              autoComplete="last-name"
+                              placeholder="Last name"
+                              required
+                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label htmlFor="job-title" className="sr-only">
+                            Job title
+                          </label>
+                          <input
+                            type="text"
+                            name="job-title"
+                            id="job-title"
+                            autoComplete="job-title"
+                            placeholder="Job title"
+                            required
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
                           />
                         </div>
 
                         <div>
-                          <label htmlFor="mobile-or-email" className="sr-only">
-                            Mobile number or email
+                          <label htmlFor="work-email" className="sr-only">
+                            Work email
+                          </label>
+                          <input
+                            type="email"
+                            name="work-email"
+                            id="work-email"
+                            autoComplete="work-email"
+                            placeholder="Work email"
+                            required
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                          />
+                        </div>
+
+                        <div>
+                          <label htmlFor="phone" className="sr-only">
+                            Work email
                           </label>
                           <input
                             type="text"
-                            name="mobile-or-email"
-                            id="mobile-or-email"
-                            autoComplete="email"
-                            placeholder="Mobile number or email"
+                            name="phone"
+                            id="phone"
+                            autoComplete="phone"
+                            placeholder="Phone number"
                             required
-                            className="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
                           />
                         </div>
 
@@ -155,18 +218,48 @@ export default function Example() {
                             placeholder="Password"
                             autoComplete="current-password"
                             required
-                            className="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
                           />
                         </div>
 
                         <div>
                           <button
                             type="submit"
-                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-btnhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-btnhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                           >
                             Create your account
                           </button>
                         </div>
+                        <fieldset className="">
+                          <legend className="sr-only">Notifications</legend>
+                          <div className="relative flex items-start">
+                            <div className="flex items-center h-5">
+                              <input
+                                id="comments"
+                                aria-describedby="comments-description"
+                                name="comments"
+                                type="checkbox"
+                                className="focus:ring-primary h-4 w-4 text-primary border-gray-300 rounded"
+                              />
+                            </div>
+                            <div className="ml-3 text-sm">
+                              <label
+                                htmlFor="comments"
+                                className="font-medium text-gray-700"
+                              >
+                                Don't be shy
+                              </label>
+                              <span
+                                id="comments-description"
+                                className="text-gray-500"
+                              >
+                                <span className="sr-only"></span> click here if
+                                you want to speak to an expert from Tribeto to
+                                help you get started.
+                              </span>
+                            </div>
+                          </div>
+                        </fieldset>
                       </form>
                     </div>
                   </div>
