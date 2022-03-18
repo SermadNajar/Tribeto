@@ -59,33 +59,33 @@ const physicalstores = [
 
 export default function Example() {
   return (
-    <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div className="py-16 bg-gray-50 dark:bg-gray-800 overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div className="relative">
-          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Seeing is believing with video reviews.{" "}
           </h2>
-          <p className="mt-4 max-w-4xl mx-auto text-center text-xl text-gray-500">
+          <p className="mt-4 max-w-4xl mx-auto text-center text-xl text-gray-500 dark:text-gray-300">
             Video reviews are little snippets of your products in the real
             world, and they really do drive sales.
           </p>
-          <p className="mt-1 max-w-4xl mx-auto text-center text-xl text-gray-500">
+          <p className="mt-1 max-w-4xl mx-auto text-center text-xl text-gray-500 dark:text-gray-300">
             In fact, having video reviews on your website - and using them in
             marketing - has proven to increase conversions by around 20%.
           </p>
         </div>
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
-            <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+            <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-3xl">
               Collect and publish with ease
             </h3>
-            <p className="mt-3 text-lg text-gray-500">
+            <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
               ‍When surveyed, 76% of consumers said they trust content shared by
               real customers more than product descriptions. Video builds on
               that trust by making the people and products in a review visibly
               real. And more trust means more sales.
             </p>
-            <p className="mt-3 text-lg text-gray-500">
+            <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
               And now with Tribeto you can automatically request UGC from your
               happiest customers, and get publish ready content at your
               fingertips.
@@ -98,11 +98,11 @@ export default function Example() {
                     <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-primary">
                       {item.name}
                     </p>
                   </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">
+                  <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">
                     {item.description}
                   </dd>
                 </div>
@@ -132,7 +132,7 @@ export default function Example() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-200 dark:text-gray-300"
                     fill="currentColor"
                   />
                 </pattern>
@@ -173,7 +173,7 @@ export default function Example() {
                 y={0}
                 width={4}
                 height={4}
-                className="text-gray-200"
+                className="text-gray-200 dark:text-gray-900"
                 fill="currentColor"
               />
             </pattern>
@@ -190,28 +190,28 @@ export default function Example() {
             <div className="absolute" />
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
-                <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                  <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                <dl className="rounded-lg bg-white dark:bg-gray-700 shadow-lg sm:grid sm:grid-cols-3">
+                  <div className="flex flex-col border-b border-gray-100 dark:border-gray-800 p-6 text-center sm:border-0 sm:border-r">
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300">
                       Higher conversion over standard reviews
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-gray-900">
+                    <dd className="order-1 text-5xl font-extrabold text-gray-900 dark:text-white">
                       35%
                     </dd>
                   </div>
-                  <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                  <div className="flex flex-col border-t border-b border-gray-100 dark:border-gray-800 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300">
                       Higher trust signal than text or image content.
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-gray-900">
+                    <dd className="order-1 text-5xl font-extrabold text-gray-900 dark:text-white">
                       3x
                     </dd>
                   </div>
-                  <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
-                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
+                  <div className="flex flex-col border-t border-gray-100 dark:border-gray-800 p-6 text-center sm:border-0 sm:border-l">
+                    <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500 dark:text-gray-300">
                       Higher engagement than brand-generated content
                     </dt>
-                    <dd className="order-1 text-5xl font-extrabold text-gray-900">
+                    <dd className="order-1 text-5xl font-extrabold text-gray-900 dark:text-white">
                       7x
                     </dd>
                   </div>
@@ -223,10 +223,10 @@ export default function Example() {
         <div className="relative mt-12 sm:mt-16 lg:mt-24">
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
-              <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
+              <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-3xl">
                 Gain insight
               </h3>
-              <p className="mt-3 text-lg text-gray-500">
+              <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
                 With Tribeto you and your company will be able to pinpoint
                 exactly what the customers pain points are. Resulting in
                 exceptional customer retention rates, loyalty to your brand and
@@ -240,11 +240,11 @@ export default function Example() {
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-primary">
                         {item.name}
                       </p>
                     </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-500">
+                    <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">
                       {item.description}
                     </dd>
                   </div>
@@ -296,7 +296,7 @@ export default function Example() {
           </div>
         </div>
         {/* Video section Start */}
-        <div className="bg-gray-50 pt-16 sm:pt-24">
+        <div className="bg-gray-50 dark:bg-gray-800 pt-16 sm:pt-24">
           <div className="relative sm:pt-16">
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="relative rounded-2xl px-6 py-10 bg-primary overflow-hidden shadow-xl sm:px-12 sm:py-20">

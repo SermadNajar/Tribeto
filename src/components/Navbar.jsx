@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/solid";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import Toggle from "../components/toggle";
+import Toggle2 from "../components/toggle2";
 
 let user = {
   name: "Chelsea Hagon",
@@ -32,6 +34,7 @@ export default function Example() {
   function handleClick(lang) {
     i18n.changeLanguage(lang);
   }
+
   return (
     <>
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
@@ -40,7 +43,7 @@ export default function Example() {
         className={({ open }) =>
           classNames(
             open ? "fixed inset-0 z-40 overflow-y-auto" : "",
-            "bg-white shadow-sm sticky top-0 z-50"
+            "bg-white dark:bg-gray-900 shadow-sm dark:shadow-gray-800 sticky top-0 z-50"
           )
         }
       >
@@ -50,13 +53,9 @@ export default function Example() {
               <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
                 <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
                   <div className="flex-shrink-0 flex items-center">
-                    <a href="./">
-                      <img
-                        className="block h-8 w-auto"
-                        src="Assets/img/logo-dark.png"
-                        alt="Tribeto logo"
-                      />
-                    </a>
+                    <div>
+                      <Toggle2 />
+                    </div>
                   </div>
                 </div>
                 <div className="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
@@ -68,14 +67,14 @@ export default function Example() {
                       <div className="relative">
                         <div className="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
                           <SearchIcon
-                            className="h-5 w-5 text-gray-400"
+                            className="h-5 w-5 text-gray-400 dark:text-gray-200"
                             aria-hidden="true"
                           />
                         </div>
                         <input
                           id="search"
                           name="search"
-                          className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm"
+                          className="block w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-800 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 dark:placeholder-gray-200 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm"
                           placeholder="Search for a company"
                           type="search"
                         />
@@ -95,13 +94,11 @@ export default function Example() {
                   </Popover.Button>
                 </div>
                 <div className="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
-                  <a
-                    href="#"
-                    className="ml-5 flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </a>
+                  {/* Toogle dark mode */}
+
+                  <Toggle />
+
+                  {/* Toggle dark mode end */}
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="flex-shrink-0 relative ml-5">
@@ -146,7 +143,7 @@ export default function Example() {
 
                   <a
                     href="/ctacampaign"
-                    className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-900 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    className="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-900 dark:bg-primary hover:bg-primary dark:hover:bg-secondary dark:focus:ring-offset-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                   >
                     FOR COMPANIES
                   </a>
@@ -189,13 +186,9 @@ export default function Example() {
                       {user.email}
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    className="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
+                  {/* Toogle dark mode */}
+                  <Toggle />
+                  {/* Toggle dark mode end */}
                 </div>
                 <div className="mt-3 max-w-3xl mx-auto px-2 space-y-1 sm:px-4">
                   {userNavigation.map((item) => (

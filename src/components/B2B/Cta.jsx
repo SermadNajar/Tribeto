@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 
 export default function Example() {
   return (
-    <div className="relative bg-gray-900 overflow-hidden">
+    <div className="relative bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div
         className="hidden sm:block sm:absolute sm:inset-0"
         aria-hidden="true"
@@ -53,24 +53,24 @@ export default function Example() {
                       aria-hidden="true"
                     />
                   </a>
-                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
                     <span className="md:block">Credibility through</span>{" "}
                     <span className="text-primary md:block">Transparency</span>
                   </h1>
-                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  <p className="mt-3 text-base text-gray-900 dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     Tribeto transforms the way companies interact with their
                     customers through video reviews.
                   </p>
                 </div>
               </div>
               <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
-                <div className="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                <div className="bg-white dark:bg-gray-800 sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden drop-shadow-lg">
                   <div className="px-4 py-8 sm:px-10">
                     <div>
-                      <p className="text-2xl m-2 text-center font-bold text-gray-700">
+                      <p className="text-2xl m-2 text-center font-bold text-gray-700 dark:text-white">
                         Create an account for free
                       </p>
-                      <p className="text-sm text-center font-medium text-gray-700">
+                      <p className="text-sm text-center font-medium text-gray-700 dark:text-white">
                         And feel the power of video reviews today.
                       </p>
                     </div>
@@ -80,7 +80,7 @@ export default function Example() {
                         className="absolute inset-0 flex items-center"
                         aria-hidden="true"
                       >
-                        <div className="w-full border-t border-gray-300" />
+                        <div className="w-full border-t border-gray-300 dark:border-gray-600" />
                       </div>
                       <div className="relative flex justify-center text-sm"></div>
                     </div>
@@ -98,7 +98,7 @@ export default function Example() {
                             autoComplete="company-name"
                             placeholder="Company name"
                             required
-                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                           />
                         </div>
 
@@ -114,7 +114,7 @@ export default function Example() {
                               autoComplete="first-name"
                               placeholder="First name"
                               required
-                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                             />
                           </div>
 
@@ -129,7 +129,7 @@ export default function Example() {
                               autoComplete="last-name"
                               placeholder="Last name"
                               required
-                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                              className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                             />
                           </div>
                         </div>
@@ -145,7 +145,7 @@ export default function Example() {
                             autoComplete="job-title"
                             placeholder="Job title"
                             required
-                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                           />
                         </div>
 
@@ -160,7 +160,7 @@ export default function Example() {
                             autoComplete="work-email"
                             placeholder="Work email"
                             required
-                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                           />
                         </div>
 
@@ -175,7 +175,7 @@ export default function Example() {
                             autoComplete="phone"
                             placeholder="Phone number"
                             required
-                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                           />
                         </div>
 
@@ -190,7 +190,7 @@ export default function Example() {
                             placeholder="Password"
                             autoComplete="current-password"
                             required
-                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md"
+                            className="block w-full shadow-sm focus:ring-primary focus:border-primary sm:text-sm border-gray-300 rounded-md dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-300"
                           />
                         </div>
 
@@ -217,13 +217,13 @@ export default function Example() {
                             <div className="ml-3 text-sm">
                               <label
                                 htmlFor="comments"
-                                className="font-medium text-gray-700"
+                                className="font-medium text-gray-700 dark:text-white"
                               >
                                 Don't be shy
                               </label>
                               <span
                                 id="comments-description"
-                                className="text-gray-500"
+                                className="text-gray-500 dark:text-gray-300"
                               >
                                 <span className="sr-only"></span> click here if
                                 you want to speak to an expert from Tribeto to
@@ -235,26 +235,26 @@ export default function Example() {
                       </form>
                     </div>
                   </div>
-                  <div className="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
-                    <p className="text-xs leading-5 text-gray-500">
+                  <div className="px-4 py-6 bg-gray-50 dark:bg-gray-700 border-t-2 border-gray-200 dark:border-gray-800 sm:px-10">
+                    <p className="text-xs leading-5 text-gray-500 dark:text-white">
                       By signing up, you agree to our{" "}
                       <a
                         href="#"
-                        className="font-medium text-gray-900 hover:underline"
+                        className="font-medium text-gray-900 dark:text-primary hover:underline"
                       >
                         Terms
                       </a>
                       ,{" "}
                       <a
                         href="#"
-                        className="font-medium text-gray-900 hover:underline"
+                        className="font-medium text-gray-900 dark:text-primary hover:underline"
                       >
                         Data Policy
                       </a>{" "}
                       and{" "}
                       <a
                         href="#"
-                        className="font-medium text-gray-900 hover:underline"
+                        className="font-medium text-gray-900 dark:text-primary hover:underline"
                       >
                         Cookies Policy
                       </a>

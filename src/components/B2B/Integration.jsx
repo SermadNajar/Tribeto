@@ -1,14 +1,14 @@
 /* This example requires Tailwind CSS v2.0+ */
 export default function Example() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div>
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
               Seamless integration with the most popular systems
             </h2>
-            <p className="mt-3 max-w-3xl text-lg text-gray-500">
+            <p className="mt-3 max-w-3xl text-lg text-gray-500 dark:text-gray-300">
               We have done all the tedious work for you, so you can safely and
               securely start using Tribeto in matter of minutes. If your system
               is not yet supported, you can achieve the same results with direct

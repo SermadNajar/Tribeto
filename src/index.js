@@ -3,14 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import "./i18n";
-import i18n from "i18next";
+import { ThemeProvider } from "./components/themeContext";
 
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <Suspense fallback={<div></div>}>
-    <App />
-  </Suspense>,
+  <ThemeProvider>
+    <body className="bg-gray-50 dark:bg-gray-900">
+      <Suspense fallback={<div></div>}>
+        <App />
+      </Suspense>
+    </body>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
