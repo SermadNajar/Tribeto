@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 
 export default function Example() {
   return (
-    <div className="relative bg-gray-800 overflow-hidden">
+    <div className="relative bg-gray-900 overflow-hidden">
       <div
         className="hidden sm:block sm:absolute sm:inset-0"
         aria-hidden="true"
@@ -61,34 +61,6 @@ export default function Example() {
                     Tribeto transforms the way companies interact with their
                     customers through video reviews.
                   </p>
-                  <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
-                    Used by
-                  </p>
-                  <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
-                    <div className="flex flex-wrap items-start justify-between">
-                      <div className="flex justify-center px-1">
-                        <img
-                          className="h-9 sm:h-10"
-                          src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                          alt="Tuple"
-                        />
-                      </div>
-                      <div className="flex justify-center px-1">
-                        <img
-                          className="h-9 sm:h-10"
-                          src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                          alt="Workcation"
-                        />
-                      </div>
-                      <div className="flex justify-center px-1">
-                        <img
-                          className="h-9 sm:h-10"
-                          src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                          alt="StaticKit"
-                        />
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
@@ -194,7 +166,7 @@ export default function Example() {
 
                         <div>
                           <label htmlFor="phone" className="sr-only">
-                            Work email
+                            Phone
                           </label>
                           <input
                             type="text"
@@ -225,7 +197,7 @@ export default function Example() {
                         <div>
                           <button
                             type="submit"
-                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-btnhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-900 hover:bg-btnhover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                           >
                             Create your account
                           </button>

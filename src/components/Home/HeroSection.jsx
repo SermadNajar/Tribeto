@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Example() {
@@ -6,7 +7,7 @@ export default function Example() {
     i18n.changeLanguage(lang);
   }
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="relative bg-gray-50 overflow-hidden">
       {/* Hero section */}
       <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
