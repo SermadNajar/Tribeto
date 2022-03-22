@@ -29,12 +29,6 @@ export default function Navbar() {
     setModal(!modal);
   };
 
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
-
   function handleClick(lang) {
     i18n.changeLanguage(lang);
   }
