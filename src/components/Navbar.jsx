@@ -7,7 +7,7 @@ import i18next from "i18next";
 import Toggle from "../components/toggle";
 import Toggle2 from "../components/toggle2";
 import React, { useState } from "react";
-import Modal from "../components/Modal";
+import ModalBtn from "../components/ModalBtn";
 import "flowbite";
 
 const navigation = [
@@ -41,15 +41,6 @@ export default function Navbar() {
 
   return (
     <>
-      {modal && (
-        <>
-          <Modal toggleModal={toggleModal} />
-          <div
-            modal-backdrop=""
-            className="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40"
-          ></div>
-        </>
-      )}
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
       <Popover
         as="header"
@@ -111,14 +102,7 @@ export default function Navbar() {
                   <Menu as="div" className="flex-shrink-0 relative ml-5">
                     <div>
                       <div>
-                        <button
-                          onClick={toggleModal}
-                          className="btn-modal"
-                          class="block text-gray-900 dark:text-white font-bold rounded-lg text-sm px-5 py-2 text-center"
-                          type="button"
-                        >
-                          Login
-                        </button>
+                        <ModalBtn />
                       </div>
                     </div>
                     <Transition
