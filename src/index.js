@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import "./i18n";
 import { ThemeProvider } from "./components/themeContext";
+import flowbite from "flowbite";
 
 import * as serviceWorker from "./serviceWorker";
 
