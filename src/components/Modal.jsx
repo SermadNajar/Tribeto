@@ -3,13 +3,21 @@ import React, { useState } from "react";
 export default function Modal({ toggleModal }) {
   return (
     <div
+    modal-backdrop=""
+    class="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40"
+  >
+    <div
       id="authentication-modal"
-      aria-hidden="true"
-      class="overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center h-modal md:h-full md:inset-0 flex"
+      tabindex="-1"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
+      aria-modal="true"
+      role="dialog"
     >
-      <div class="relative px-4 w-full max-w-md h-full md:h-auto">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <div class="flex justify-end p-2">
+            
             <button
               className="close-modal"
               onClick={toggleModal}
@@ -111,6 +119,8 @@ export default function Modal({ toggleModal }) {
           </form>
         </div>
       </div>
+    </div>
+    
     </div>
   );
 }

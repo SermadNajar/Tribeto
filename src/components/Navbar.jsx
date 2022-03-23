@@ -7,7 +7,7 @@ import i18next from "i18next";
 import Toggle from "../components/toggle";
 import Toggle2 from "../components/toggle2";
 import React, { useState } from "react";
-import Modal from "../components/Modal";
+import ModalBtn from "../components/ModalBtn";
 import "flowbite";
 
 const navigation = [
@@ -29,27 +29,12 @@ export default function Navbar() {
     setModal(!modal);
   };
 
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
-
   function handleClick(lang) {
     i18n.changeLanguage(lang);
   }
 
   return (
     <>
-      {modal && (
-        <>
-          <Modal toggleModal={toggleModal} />
-          <div
-            modal-backdrop=""
-            className="bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40"
-          ></div>
-        </>
-      )}
       {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
       <Popover
         as="header"
@@ -111,14 +96,7 @@ export default function Navbar() {
                   <Menu as="div" className="flex-shrink-0 relative ml-5">
                     <div>
                       <div>
-                        <button
-                          onClick={toggleModal}
-                          className="btn-modal"
-                          class="block text-gray-900 dark:text-white font-bold rounded-lg text-sm px-5 py-2 text-center"
-                          type="button"
-                        >
-                          Login
-                        </button>
+                        <ModalBtn />
                       </div>
                     </div>
                     <Transition
@@ -165,14 +143,9 @@ export default function Navbar() {
               <div className="border-t border-gray-200 pt-4 pb-3">
                 <div className="max-w-3xl mx-auto px-4 flex items-center sm:px-6">
                   <div className="max-w-3xl">
-                    <button
-                      onClick={toggleModal}
-                      className="btn-modal"
-                      class="block text-gray-900 dark:text-white font-bold rounded-lg text-sm px-5 py-2 text-center"
-                      type="button"
-                    >
-                      Login Mobile
-                    </button>
+                    <div>
+                      <ModalBtn />
+                    </div>
                   </div>
                   {/* Toogle dark mode */}
                   <div className="ml-auto">
