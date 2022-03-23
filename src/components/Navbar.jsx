@@ -143,14 +143,9 @@ export default function Navbar() {
               <div className="border-t border-gray-200 pt-4 pb-3">
                 <div className="max-w-3xl mx-auto px-4 flex items-center sm:px-6">
                   <div className="max-w-3xl">
-                    <button
-                      onClick={toggleModal}
-                      className="btn-modal"
-                      class="block text-gray-900 dark:text-white font-bold rounded-lg text-sm px-5 py-2 text-center"
-                      type="button"
-                    >
-                      Login Mobile
-                    </button>
+                    <div>
+                      <ModalBtn />
+                    </div>
                   </div>
                   {/* Toogle dark mode */}
                   <div className="ml-auto">
