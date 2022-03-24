@@ -9,18 +9,16 @@ const LogoToggle = () => {
       {theme === "dark" ? (
         <a href="./">
           <img
-            logo={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="block h-8 w-auto"
-            src="Assets/img/logo-dark.svg"
+            src={window.location.origin + "/Assets/img/logo-dark.svg"}
             alt="Tribeto logo"
           />
         </a>
       ) : (
         <a href="./">
           <img
-            logo={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="block h-8 w-auto"
-            src="Assets/img/logo-light.svg"
+            src={window.location.origin + "/Assets/img/logo-light.svg"}
             alt="Tribeto logo"
           />
         </a>
