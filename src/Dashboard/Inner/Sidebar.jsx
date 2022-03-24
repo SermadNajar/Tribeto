@@ -5,6 +5,7 @@ import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline";
 
 import Toggle from "../../components/toggle";
 import Toggle2 from "../../components/toggle2";
+import Footer from "../../Dashboard/Inner/Footer";
 
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -18,6 +19,12 @@ function classNames(...classes) {
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
+  let activeClassName = "underline";
 
   return (
     <>
@@ -79,28 +86,32 @@ export default function Dashboard() {
                 </div>
                 <div className="mt-5 flex-1 h-0 overflow-y-auto">
                   <nav className="px-2 space-y-1">
-                    <ul>
-                      <li className="px-2 space-y-1">
-                        <NavLink
-                          to="/Dashboard/overview"
-                          exact
-                          className="group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                          activeClassName="bg-gray-900 text-white"
-                        >
-                          Overview
-                        </NavLink>
-                      </li>
-                      <li className="px-2 space-y-1">
-                        <NavLink
-                          to="/Dashboard/settings"
-                          exact
-                          className="group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                          activeClassName="bg-gray-900 text-white"
-                        >
-                          Settings
-                        </NavLink>
-                      </li>
-                    </ul>
+                    <NavLink
+                      to="overview"
+                      className={({ isActive }) =>
+                        classNames(
+                          isActive
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                        )
+                      }
+                    >
+                      Overview Desk
+                    </NavLink>
+                    <NavLink
+                      to="settings"
+                      className={({ isActive }) =>
+                        classNames(
+                          isActive
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                        )
+                      }
+                    >
+                      Settings Desk
+                    </NavLink>
                   </nav>
                 </div>
               </div>
@@ -122,28 +133,32 @@ export default function Dashboard() {
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 space-y-1">
-                <ul>
-                  <li className="px-2 space-y-1">
-                    <NavLink
-                      to="/dashboard/overview"
-                      exact
-                      className="group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                      activeClassName="bg-gray-900 text-white"
-                    >
-                      Overview
-                    </NavLink>
-                  </li>
-                  <li className="px-2 space-y-1">
-                    <NavLink
-                      to="/dashboard/settings"
-                      exact
-                      className="group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                      activeClassName="bg-gray-900 text-white"
-                    >
-                      Settings
-                    </NavLink>
-                  </li>
-                </ul>
+                <NavLink
+                  to="overview"
+                  className={({ isActive }) =>
+                    classNames(
+                      isActive
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                    )
+                  }
+                >
+                  Overview Desk
+                </NavLink>
+                <NavLink
+                  to="settings"
+                  className={({ isActive }) =>
+                    classNames(
+                      isActive
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                    )
+                  }
+                >
+                  Settings Desk
+                </NavLink>
               </nav>
             </div>
           </div>
@@ -208,15 +223,11 @@ export default function Dashboard() {
           </div>
 
           <main className="flex-1">
-            <div className="py-6">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold text-gray-900">
-                  Dashboard
-                </h1>
-              </div>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div>
+              <div className="max-w-full mx-auto">
                 {/* Replace with your content */}
                 <Outlet />
+                <Footer />
                 {/* /End replace */}
               </div>
             </div>

@@ -8,7 +8,6 @@ import WithoutNav from "./components/WithoutNav";
 import Overview from "./Dashboard/Pages/Overview";
 import Settings from "./Dashboard/Pages/Settings";
 import Dashboard from "./Pages/Dashboard";
-import Footer from "./Dashboard/Inner/Footer";
 
 function App() {
   return (
@@ -17,10 +16,9 @@ function App() {
         <Routes>
           <Route>
             // Dashboard
-            <Route path="/Dashboard" element={<Dashboard />}>
-              <Route exact path="/Dashboard/overview" element={<Overview />} />
-              <Route exact path="/Dashboard/settings" element={<Settings />} />
-              <Route path="*/Dashboard" element={<Footer />} />
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route path="overview" element={<Overview />} />
+              <Route path="settings" element={<Settings />} />
             </Route>
           </Route>
           // Error page without Main navigaiton bar
