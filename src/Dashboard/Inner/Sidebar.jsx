@@ -1,11 +1,10 @@
 import { Fragment, useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import { Dialog, Menu, Transition } from "@headlessui/react";
-import { MenuAlt2Icon, XIcon } from "@heroicons/react/outline";
+import { MenuAlt2Icon, XIcon, ViewGridIcon } from "@heroicons/react/outline";
 
 import Toggle from "../../components/toggle";
 import Toggle2 from "../../components/toggle2";
-import Footer from "../../Dashboard/Inner/Footer";
 
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -19,12 +18,6 @@ function classNames(...classes) {
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  let activeStyle = {
-    textDecoration: "underline",
-  };
-
-  let activeClassName = "underline";
 
   return (
     <>
@@ -86,32 +79,7 @@ export default function Dashboard() {
                 </div>
                 <div className="mt-5 flex-1 h-0 overflow-y-auto">
                   <nav className="px-2 space-y-1">
-                    <NavLink
-                      to="overview"
-                      className={({ isActive }) =>
-                        classNames(
-                          isActive
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                        )
-                      }
-                    >
-                      Overview Desk
-                    </NavLink>
-                    <NavLink
-                      to="settings"
-                      className={({ isActive }) =>
-                        classNames(
-                          isActive
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                        )
-                      }
-                    >
-                      Settings Desk
-                    </NavLink>
+                    {/* Mobile Sidebar Navigation when readyt */}
                   </nav>
                 </div>
               </div>
@@ -125,8 +93,8 @@ export default function Dashboard() {
         {/* Static sidebar for desktop */}
         <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex-1 flex flex-col min-h-0 bg-white dark:bg-gray-800">
-            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-white dark:bg-gray-900 w-auto">
+          <div className="flex-1 flex flex-col min-h-0 bg-white dark:bg-gray-900">
+            <div className="flex items-center h-16 flex-shrink-0 px-4 bg-white dark:bg-gray-900 w-auto mx-auto">
               <div>
                 <Toggle2 />
               </div>
@@ -138,12 +106,13 @@ export default function Dashboard() {
                   className={({ isActive }) =>
                     classNames(
                       isActive
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "bg-primary  text-white active-icon"
+                        : "text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 inactive-icon",
                       "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                     )
                   }
                 >
+                  <ViewGridIcon className="group-hover:text-gray-500 dark:group-hover:text-gray-50 ml-2 mr-3 flex-shrink-0 h-6 w-6" />
                   Overview Desk
                 </NavLink>
                 <NavLink
@@ -151,12 +120,13 @@ export default function Dashboard() {
                   className={({ isActive }) =>
                     classNames(
                       isActive
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "bg-primary  text-white active-icon"
+                        : "text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 inactive-icon",
                       "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                     )
                   }
                 >
+                  <ViewGridIcon className="group-hover:text-gray-500 dark:group-hover:text-gray-50 ml-2 mr-3 flex-shrink-0 h-6 w-6" />
                   Settings Desk
                 </NavLink>
               </nav>
@@ -164,7 +134,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="md:pl-64 flex flex-col">
-          <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white dark:bg-gray-900">
+          <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white dark:bg-gray-900 shadow">
             <button
               type="button"
               className="px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary md:hidden"
@@ -224,10 +194,9 @@ export default function Dashboard() {
 
           <main className="flex-1">
             <div>
-              <div className="max-w-full mx-auto">
+              <div className="">
                 {/* Replace with your content */}
                 <Outlet />
-                <Footer />
                 {/* /End replace */}
               </div>
             </div>
