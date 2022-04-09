@@ -10,7 +10,7 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <ThemeProvider>
-    <body className="bg-gray-50 dark:bg-gray-900">
+    <body className="bg-gray-100 dark:bg-gray-800">
       <Suspense fallback={<div></div>}>
         <App />
       </Suspense>
