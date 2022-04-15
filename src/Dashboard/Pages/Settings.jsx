@@ -1,9 +1,9 @@
-import LineChart from "../Inner/LineChart";
+import Settings from "../Inner/Settings";
 
-export default function Settings() {
+export default function SettingsPage() {
   return (
     <>
-      <LineChart />
+      <Settings />
     </>
   );
 }

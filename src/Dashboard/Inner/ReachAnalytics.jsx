@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from "react";
-import LineChart from "../Inner/Charts/LineChart";
-import Sessions from "../Inner/Sessions";
-import RecentReviews from "../Inner/RecentReviews";
+import React from "react";
+import OrganicReach from "./Charts/OrganicReachChart";
+import ChartBar from "./Bars/ChartBar";
+import ReviewRatingsChart from "./Bars/ReviewRatingsBar";
 import { ArrowSmDownIcon, ArrowSmUpIcon } from "@heroicons/react/solid";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import SessionsBar from "./Bars/SessionsBar";
+import ReachLinkBar from "./Bars/ReachLinkBar";
 
 const stats = [
   {
     id: 1,
-    name: "Overall Score",
-    stat: "92",
+    name: "Mobile",
+    stat: "1,4401,26",
     icon: ArrowSmDownIcon,
-    change: "87",
-    changeType: "increase",
+    change: "4588",
+    changeType: "decrease",
   },
 ];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Welcome() {
   const current = new Date();
@@ -32,25 +34,12 @@ export default function Welcome() {
           {/* Page header */}
           <div className="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
             <div className="flex items-center space-x-5">
-              <div className="flex-shrink-0">
-                <div className="relative">
-                  <img
-                    className="h-16 w-16 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                  <span
-                    className="absolute inset-0 shadow-inner rounded-full"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Hello, Tim Cook
+                  Reach Analytics
                 </h1>
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                  Welcome to your dashboard, {date}
+                  {date}
                 </p>
               </div>
             </div>
@@ -58,15 +47,16 @@ export default function Welcome() {
 
           <div className="mt-8 max-w-3xl mx-auto grid grid-cols-1 gap-6 sm:px-6 lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-1">
             <div className="space-y-6 lg:col-start-1 lg:col-span-2">
-              <Sessions />
+              <SessionsBar />
               {/* Description list*/}
+
               <div className="bg-white dark:bg-gray-900 shadow sm:rounded-lg">
                 <div className="px-4 py-5 sm:px-6">
                   <h2
                     id="applicant-information-title"
                     className="text-lg leading-6 font-medium text-gray-900 dark:text-white"
                   >
-                    Overall Score
+                    Organic Tribeto Search Impressions
                   </h2>
                   {stats.map((item) => (
                     <div key={item.id}>
@@ -105,18 +95,19 @@ export default function Welcome() {
                       </dd>
                     </div>
                   ))}
-                  <p className="mt-1 max-w-2xl text-sm text-gray-500 dark:text-white">
-                    See what's happening with
-                    <p className="font-bold text-gray-900 dark:text-white">
-                      www.test.com
-                    </p>
-                  </p>
                 </div>
                 <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
-                  <LineChart />
+                  <OrganicReach />
                 </div>
               </div>
-              <RecentReviews />
+
+              <section aria-labelledby="applicant-information-title">
+                <div className="bg-white dark:bg-gray-900 shadow sm:rounded-lg">
+                  <div className="px-4 py-5 sm:px-6">
+                    <ReachLinkBar />
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </main>
