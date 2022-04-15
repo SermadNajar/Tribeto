@@ -40,11 +40,11 @@ function classNames(...classes) {
 export default function Stats() {
   return (
     <div>
-      <dl className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-1 lg:grid-cols-3">
         {stats.map((item) => (
           <div
             key={item.id}
-            className="relative bg-white dark:bg-gray-900 pt-5 px-4 pb-12 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden"
+            className="relative bg-white dark:bg-gray-900 pt-5 px-4 sm:pt-6 sm:px-6 shadow rounded-lg overflow-hidden"
           >
             <dt>
               <div className="absolute bg-primary rounded-md p-3">
@@ -54,7 +54,7 @@ export default function Stats() {
                 {item.name}
               </p>
             </dt>
-            <dd className="ml-16 pb-6 flex items-baseline sm:pb-7">
+            <dd className="ml-16 pb-5 flex items-baseline">
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">
                 {item.stat}
               </p>
@@ -84,17 +84,6 @@ export default function Stats() {
                 </span>
                 {item.change}
               </p>
-              <div className="absolute bottom-0 inset-x-0 bg-gray-50 dark:bg-gray-700 px-4 py-4 sm:px-6">
-                <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-medium text-primary hover:text-secondary"
-                  >
-                    {" "}
-                    View all<span className="sr-only"> {item.name} stats</span>
-                  </a>
-                </div>
-              </div>
             </dd>
           </div>
         ))}

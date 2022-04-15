@@ -7,6 +7,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import faker from "faker";
@@ -19,7 +20,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler
 );
 
 const DISPLAY = false;
@@ -48,8 +50,10 @@ export const data = {
     {
       label: "Overall score",
       data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-      borderColor: "rgb(0 177 136",
-      backgroundColor: "rgb(0 177 136)",
+      backgroundColor: "rgb(0, 177, 136, 0.2)",
+      borderColor: "rgb(0 177 136)",
+      tension: 0.4,
+      fill: true,
     },
   ],
 };
@@ -64,11 +68,7 @@ export default function LineChart({ width = 300, height = 300 }) {
       setHovered(false);
     },
     responsive: true,
-    elements: {
-      line: {
-        tension: 0.4, // disables bezier curves
-      },
-    },
+    elements: {},
     scales: {
       x: {
         grid: {
@@ -92,12 +92,23 @@ export default function LineChart({ width = 300, height = 300 }) {
       },
     },
     plugins: {
+      datalabels: {
+        // hide datalabels for all datasets
+        display: false,
+      },
       legend: {
         position: "bottom",
+        display: false,
       },
       title: {
         display: false,
-        text: "Welcome Amine",
+        text: "Welcome",
+      },
+      tooltip: {
+        yAlign: "bottom",
+        displayColors: false,
+        titleAlign: "center",
+        backgroundColor: "rgb(0 177 136)",
       },
     },
   };

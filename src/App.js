@@ -8,6 +8,11 @@ import WithoutNav from "./components/WithoutNav";
 import Overview from "./Dashboard/Pages/Overview";
 import Settings from "./Dashboard/Pages/Settings";
 import Dashboard from "./Pages/Dashboard";
+import ReviewRatings from "./Dashboard/Inner/ReviewRatings";
+import InvitationConversion from "./Dashboard/Inner/InvitationConversion";
+import ReachAnalytics from "./Dashboard/Inner/ReachAnalytics";
+import Replies from "./Dashboard/Inner/Replies";
+import Benchmark from "./Dashboard/Inner/Benchmark";
 
 function App() {
   return (
@@ -18,6 +23,11 @@ function App() {
             // Dashboard
             <Route path="dashboard" element={<Dashboard />}>
               <Route path="overview" element={<Overview />} />
+              <Route path="review-ratings" element={<ReviewRatings />} />
+              <Route path="invitation-conversion" element={<InvitationConversion />} />
+              <Route path="reach-analytics" element={<ReachAnalytics />} />
+              <Route path="replies" element={<Replies />} />
+              <Route path="benchmark" element={<Benchmark />} />
               <Route path="settings" element={<Settings />} />
             </Route>
           </Route>
