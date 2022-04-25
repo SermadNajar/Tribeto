@@ -9,3 +9,13 @@
   color: rgb(107 114 128 / var(--tw-text-opacity)) !important;
 }
 
+.mySwiper {
+  margin-bottom: 50px;
+  width: 95%;
+}
+
+.mySwiper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
