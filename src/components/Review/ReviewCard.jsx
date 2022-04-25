@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./ReviewModal";
 
-export default function Example() {
+export default function ReviewCard() {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   return (
-    <div className="flex flex-col h-96 w-64 relative overflow-hidden rounded-2xl">
+    <div
+      className="flex flex-col h-96 w-64 relative overflow-hidden rounded-2xl"
+      onClick={toggleModal}
+    >
       <video
-        className="w-full h-full object-cover"
+        className="btn-modal w-full h-full object-cover"
         autoPlay
         loop
         muted
-        src="Assets/img/video/test.mp4"
+        src="Assets/img/video/sermad.mp4"
         type="video/mp4"
       />
       <div className="absolute w-full h-full bg-gray-900/10"></div>
@@ -24,7 +40,9 @@ export default function Example() {
                 />
               </div>
               <div className="ml-3">
-                <p className="text-m font-bold text-white -mt-1 -mb-1">Sermad Alladin</p>
+                <p className="text-m font-bold text-white -mt-1 -mb-1">
+                  Sermad Alladin
+                </p>
                 <p className="text-sm font-medium text-gray-50">
                   Elgiganten • 18 t.
                 </p>
@@ -43,6 +61,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      {modal && <Modal toggleModal={toggleModal} />}
     </div>
   );
 }
